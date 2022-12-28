@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31C2F570-E00E-44D0-8678-77E73AAD25AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Projeto_SistemadeChamadosCMR</RootNamespace>
+    <AssemblyName>Projeto_SistemadeChamadosCMR</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\srvjdifs01\Softwares\Deploys Windows Forms\Sistema de Chamados\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1A621699CFB2AA0134E1F0CA750555DE973EFDC6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Forms_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.12.0.4100.1\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.8.8\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Web.6.8.8\lib\net45\MySql.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAberturaChamados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAberturaChamados.Designer.cs">
+      <DependentUpon>FrmAberturaChamados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdministracaoChamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdministracaoChamado.Designer.cs">
+      <DependentUpon>FrmAdministracaoChamado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAutorizaChamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutorizaChamado.Designer.cs">
+      <DependentUpon>FrmAutorizaChamado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarHistorico.Designer.cs">
+      <DependentUpon>FrmBuscarHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastraGestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastraGestor.Designer.cs">
+      <DependentUpon>FrmCadastraGestor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroscs.Designer.cs">
+      <DependentUpon>FrmCadastroscs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroUsuario.Designer.cs">
+      <DependentUpon>FrmCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChamadosLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChamadosLista.Designer.cs">
+      <DependentUpon>FrmChamadosLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartamento.Designer.cs">
+      <DependentUpon>FrmDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInformation.Designer.cs">
+      <DependentUpon>FrmInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPermissoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPermissoes.Designer.cs">
+      <DependentUpon>FrmPermissoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSenhaGestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSenhaGestor.Designer.cs">
+      <DependentUpon>FrmSenhaGestor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSubCategoria.Designer.cs">
+      <DependentUpon>FrmSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuariosAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuariosAD.Designer.cs">
+      <DependentUpon>FrmUsuariosAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisualizarChamadoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisualizarChamadoUser.Designer.cs">
+      <DependentUpon>FrmVisualizarChamadoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FrmAberturaChamados.resx">
+      <DependentUpon>FrmAberturaChamados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdministracaoChamado.resx">
+      <DependentUpon>FrmAdministracaoChamado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAutorizaChamado.resx">
+      <DependentUpon>FrmAutorizaChamado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarHistorico.resx">
+      <DependentUpon>FrmBuscarHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastraGestor.resx">
+      <DependentUpon>FrmCadastraGestor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroscs.resx">
+      <DependentUpon>FrmCadastroscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroUsuario.resx">
+      <DependentUpon>FrmCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChamadosLista.resx">
+      <DependentUpon>FrmChamadosLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartamento.resx">
+      <DependentUpon>FrmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInformation.resx">
+      <DependentUpon>FrmInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPermissoes.resx">
+      <DependentUpon>FrmPermissoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSenhaGestor.resx">
+      <DependentUpon>FrmSenhaGestor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSubCategoria.resx">
+      <DependentUpon>FrmSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuariosAD.resx">
+      <DependentUpon>FrmUsuariosAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisualizarChamadoUser.resx">
+      <DependentUpon>FrmVisualizarChamadoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relatorios\Report1_Chamadosrdlc.rdlc" />
+    <None Include="Forms_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Entidades.ChamadosE.datasource" />
+    <None Include="Properties\DataSources\Persistencia.ChamadosP.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{4fdaed98-2f3c-47e4-b1ef-cd88a8b7db0c}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistencia\Persistencia.csproj">
+      <Project>{3e92a889-5dff-48f7-85d4-b0e4abcfc8c4}</Project>
+      <Name>Persistencia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ActiveDs">
+      <Guid>{97D25DB0-0363-11CF-ABC4-02608C9E7553}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
